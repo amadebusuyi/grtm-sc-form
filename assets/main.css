@@ -166,7 +166,7 @@ iframe {
 }
 
 .wrap-contact100 {
-  width: 500px;
+  width: 600px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -184,12 +184,22 @@ iframe {
 .contact100-form-title {
   display: block;
   font-family: Poppins-Bold;
-  font-size: 39px;
+  font-size: 36px;
   color: #333333;
   line-height: 1.2;
   text-align: center;
   padding-bottom: 44px;
 }
+
+@media (max-width: 456px) {
+  .contact100-form-title {
+    font-size: 24px;
+  }
+}
+
+.need-help { color: blue; cursor: pointer; text-align: center; margin-bottom: 15px;}
+
+.need-help:hover { opacity: 0.8; }
 
 
 

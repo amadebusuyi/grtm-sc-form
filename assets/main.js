@@ -82,7 +82,7 @@
 
         let added = new Date().toISOString().slice(0, 16);
 
-        const number = "2348065348422";
+        const number = "2348178072324";
 
         const uid = firebase.database().ref().child('userInfo').push().key;
         firebase.database().ref('userInfo/' + uid).set({
@@ -127,6 +127,7 @@
                     '#fc00ff, #00dbde); color: #fff; border-radius: 50%; padding: 10px; position: relative;"></i></div>'+
                     '<h1 style="position: relative; text-align: center; margin-top: 10px">Successful</h1><br>'+
                     '<p><small>Yay! You just signed up for this life changing opportunity and we are excited for you.</small></p>'+
+                    '<p><small>Your apllication will be vetted and you will be contacted when it has been approved</small></p>'+
                     '<h4 style="border-bottom: 2px dotted #999; margin: 15px 0;">For More Information</h4>'+
                     '<p>Ndifreke: 07039281103</p>'+
                     '<p>Joshua: 08178072324</p>'+
