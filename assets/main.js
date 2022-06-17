@@ -120,14 +120,14 @@
               }
               else{
 
-                let wMsg = "Hello, I just signed up for " +course.val() + "in the upcoming GRTM summer camp";
+                let wMsg = "Hello, I just signed up for " +course.val() + "in the upcoming GRTM Academy summer camp";
                 let msg = 
                 '<div class="feedback area"><div style="text-align: center">'+
                     '<i class="fa fa-check fa-4x animated tada bounce" style="background: linear-gradient(45deg,'+
                     '#fc00ff, #00dbde); color: #fff; border-radius: 50%; padding: 10px; position: relative;"></i></div>'+
                     '<h1 style="position: relative; text-align: center; margin-top: 10px">Successful</h1><br>'+
                     '<p><small>Yay! You just signed up for this life changing opportunity and we are excited for you.</small></p>'+
-                    '<p><small>Your apllication will be vetted and you will be contacted when it has been approved</small></p>'+
+                    '<p><small>Your application will be vetted and you will be contacted when it has been approved</small></p>'+
                     '<h4 style="border-bottom: 2px dotted #999; margin: 15px 0;">For More Information</h4>'+
                     '<p>Ndifreke: 07039281103</p>'+
                     '<p>Joshua: 08178072324</p>'+
