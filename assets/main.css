@@ -201,7 +201,9 @@ iframe {
 
 .need-help:hover { opacity: 0.8; }
 
-
+.hide-dropdown {
+  display: none;
+}
 
 /*------------------------------------------------------------------
 [ Input ]*/

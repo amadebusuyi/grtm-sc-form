@@ -23,10 +23,19 @@
     var email = $('.validate-input input[name="email"]');
     var age = $('.validate-input input[name="age"]');
     var course = $('.validate-input select[name="course"]');
+    var laptop = $('.validate-input select[name="laptop"]');
     var phone = $('.validate-input input[name="phone"]');
     var interests = $('textarea[name="interests"]');
     var dope = $('textarea[name="dope"]');
     var impact = $('textarea[name="impact"]');
+
+    $('#course-selection').change(function () {
+        if (!['Story telling'].includes($(this).val())) {
+            $('.hide-dropdown').show();
+        } else {
+            $('.hide-dropdown').hide();
+        }
+    });
 
     $('.validate-form').on('submit', function(e){
         e.preventDefault();
@@ -59,6 +68,11 @@
             check=false;
         }
 
+        if(($(laptop).val() == '' || $(laptop).val() == null) && $(course).val() !== 'Story telling'){
+            showValidate(laptop);
+            check=false;
+        }
+
         if($(dope).val() == '' || $(dope).val() == null){
             showValidate(dope);
             check=false;
@@ -84,17 +98,34 @@
 
         const number = "2348178072324";
 
+        const confirmEmail = async (email) => {
+            firebase.database().ref('userInfo').on("value", function(snapshot){
+                snapshot.forEach(function(child){
+                    if (child.email.toLowerCase() === email.toLowerCase()) {
+                        isRegistered = true;
+                        return true;
+                    }
+                })
+                return false;
+            })
+        }
+
+        const checkEmail = await confirmEmail(email.val());
+
+        if (checkEmail) alert('Email already registered');
+
         const uid = firebase.database().ref().child('userInfo').push().key;
         firebase.database().ref('userInfo/' + uid).set({
-          name : name.val(),
-          email : email.val(),
-          phone : phone.val(),
-          age : age.val(),
-          impact : impact.val(),
-          interests : interests.val(),
-          dope : dope.val(),
-          course: course.val(),
-          added: added
+              name : name.val(),
+              email : email.val(),
+              phone : phone.val(),
+              age : age.val(),
+              impact : impact.val(),
+              interests : interests.val(),
+              dope : dope.val(),
+              course: course.val(),
+              added: added,
+              laptop: laptop.val()
           },
           function(error){
               if(error){

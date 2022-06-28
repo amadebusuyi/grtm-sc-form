@@ -35,6 +35,8 @@
 				<span class="contact100-form-title">
 					GRTM Academy Summer Bootcamp Registration
 				</span>
+				<h6 style="text-align:center; color: blue; opacity: 0.8">Register to get started, the courses are free.</h6>
+				<br>
 
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Your Name</span>
@@ -78,14 +80,24 @@
 				<div class="wrap-input100 validate-input input100-select" data-validate="Select desired training">
 					<span class="label-input100">Choose Course</span>
 					
-					<select class="selection-2 select2-hidden-accessible" name="course" tabindex="-1" aria-hidden="true">
+					<select class="selection-2 select2-hidden-accessible" id="course-selection" name="course" tabindex="-1" aria-hidden="true">
 						<option value="" disabled="disabled" selected="selected">Select One</option>
 						<option>Web development</option>
 						<option>Story telling</option>
 						<option>Film making</option>
-						<option>Visual design</option>
+						<option>Graphics design & Illustration</option>
 						<option>Product design</option>
-						<option>Music production</option>
+					</select>
+					
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input input100-select hide-dropdown" data-validate="Please confirm if you have a laptop">
+					<span class="label-input100">Do you have a laptop for this training?</span>
+					
+					<select class="selection-2 select2-hidden-accessible" name="laptop" tabindex="-1" aria-hidden="true">
+						<option value="" disabled="disabled" selected="selected">Select One</option>
+						<option>Yes, I do</option>
+						<option>No, I don't</option>
 					</select>
 					
 					<span class="focus-input100"></span>
@@ -132,7 +144,6 @@
 <!--===============================================================================================-->
 	<script src="assets/countdowntime.js"></script>
 <!--===============================================================================================-->
-
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="assets/firebase-app.js"></script>
 <script src="assets/firebase-database.js"></script>
