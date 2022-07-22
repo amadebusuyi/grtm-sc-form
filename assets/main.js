@@ -70,7 +70,6 @@
         await getEmails.then((emails) => {
             if (emails.includes(email)) status = true;
         })
-        alert
         return status;
     };
 
